@@ -1,0 +1,83 @@
+first page //////////////////////////////////////////
+
+1.Inputs
+   1.Username (By.cssSelector("#user-name")
+   2.Password (By.cssSelector("#password")
+2.Button (By.cssSelector("#login-button")
+
+inventory page /////////////////////////////////////////////
+
+1.ShoppingCart (By.cssSelector(".shopping_cart_link"))
+
+products :
+
+   1. Sauce Labs Backpack +
+       1. по картинке ((By.cssSelector("[src=\"./img/sauce-backpack-1200x1500.jpg\"]"))
+       2. по тексту (By.xpath("//div[(text()='Sauce Labs Backpack')]")
+       3. Add/Remove (By.xpath("//*[@class='inventory_list']//div[1]//button")
+            1.Add/Remove (By.cssSelector(".btn_primary"
+
+   2. Sauce Labs Bike Light +
+       1. по картинке ((By.cssSelector("[src=\"./img/bike-light-1200x1500.jpg"]"))
+       2. по тексту (By.xpath("//div[(text()='Sauce Labs Bike Light')]")
+       3. Add/Remove (By.xpath("//div[3]//div[3]//button")
+            1.Add/Remove (By.cssSelector(".btn_primary"
+
+   3. Sauce Labs Backpack
+       1. по картинке ((By.cssSelector("[src=\"./img/sauce-backpack-1200x1500.jpg\"]"))
+       2. по тексту (By.id("item_4_img_link")
+       3. Add/Remove (By.xpath("//*[@class='inventory_list']//div[3]//button")
+            1.Add/Remove (By.cssSelector(".btn_primary"
+
+   4. Sauce Labs Fleece Jacket +
+       1. по картинке ((By.cssSelector("[src=\"../img/sauce-pullover-1200x1500.jpg"]"))
+       2. по тексту (By.xpath("//div[(text()='Sauce Labs Fleece Jacket')]")
+       3. Add/Remove (By.xpath("//*[@class='inventory_list']//div[4]//button")
+
+            1.Add/Remove (By.cssSelector(".btn_primary"
+
+   5. Sauce Labs Onesie +
+       1. по картинке ((By.cssSelector("[src=\"./img/red-onesie-1200x1500.jpg"]"))
+       2. по тексту (By.xpath("//div[(text()='Sauce Labs Onesie')]")
+       3. Add/Remove (By.xpath("//*[@class='inventory_list']//div[5]//button[1]")
+            1.Add/Remove (By.cssSelector(".btn_primary"
+
+   6. Test.allTheThings() T-Shirt (Red) +
+       1. по картинке ((By.cssSelector("[src=\"./img/red-tatt-1200x1500.jpg"]"))
+       2. по тексту (By.xpath("//div[(text()='Test.allTheThings() T-Shirt (Red)')]");
+       3. Add/Remove (By.xpath("//*[@class='inventory_list']//div[6]//button[1]")
+            1.Add/Remove (By.cssSelector(".btn_primary")
+
+panel ///////////////////////////////////////////////////////////////////////
+
+ open button :      By.cssSelector(".bm-burger-button");
+ all items :        By.cssSelector("#inventory_sidebar_link");
+ about :            By.cssSelector("#about_sidebar_link");
+ logout :           By.cssSelector("#logout_sidebar_link");
+ reset app state :  By.cssSelector("#reset_sidebar_link");
+ close :            By.cssSelector(".bm-cross-button")).click();
+
+cart /////////////////////////////////////////////////////////////////////
+
+1. Continue Shopping (By.cssSelector("a[href*=\"./inventory.html\"]"));
+2.Checkout (By.cssSelector("[.btn_action]"));
+3.Remove Elements(By.cssSelector("[.btn_secondary]"));
+
+checkout ////////////////////////////////////////////////////////////////
+inputs:
+1.firstname By.cssSelector("#first-name"))
+2.lastname By.cssSelector("#last-name"))
+3.zipcode By.cssSelector("#postal-code"))
+
+buttons:
+1.cancel By.cssSelector(".cart_cancel_link"))
+2.continue By.cssSelector("[type="submit"]"));
+3.finish (By.cssSelector("a[href*="./checkout-complete.html"]"));
+
+errors:
+By.cssSelector("[data-test="error"]"));
+
+checkout complite : https://www.saucedemo.com/checkout-complete.html
+
+
+
