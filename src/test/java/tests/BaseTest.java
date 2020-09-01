@@ -5,10 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import pages.CheckoutPage;
-import pages.LeftPanel;
-import pages.LoginPage;
-import pages.ProductListPage;
+import pages.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -18,11 +15,11 @@ public class BaseTest {
     WebDriver driver;
     LoginPage loginPage;
     ProductListPage productPage;
-    LeftPanel leftPanel;
-    CheckoutPage checkoutPage;
+    BurgerMenu burgerMenu;
+    CartPage cartPage;
     @BeforeMethod
     public void setBrowser() {
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.setHeadless(true);
         driver = new ChromeDriver(options);
@@ -30,11 +27,16 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         loginPage = new LoginPage(driver);
         productPage = new ProductListPage(driver);
-        leftPanel = new LeftPanel(driver);
-        checkoutPage = new CheckoutPage(driver);
-        loginPage.openPage();
+        burgerMenu = new BurgerMenu(driver);
+        cartPage = new CartPage(driver);
+
 
     }
+
+
+
+
+
     @AfterMethod(alwaysRun = true)
     public void closeDriver() {
         driver.close();
