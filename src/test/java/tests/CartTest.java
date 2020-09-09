@@ -2,11 +2,13 @@ package tests;
 
 import org.testng.annotations.Test;
 
+import java.util.Properties;
+
 public class CartTest extends BaseTest {
     @Test
     public void testRedMarkWithAmountItemIntoCart() {
         loginPage.openPage().
-                loginPositive(USER, PASS).
+                loginPositive( System.getProperty("user"),   System.getProperty("password")).
                 addProduct("Sauce Labs Backpack").
                 addProduct("Sauce Labs Bolt T-Shirt").
                 checkRedMarkerAmount("2").
