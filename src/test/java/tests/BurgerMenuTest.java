@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class BurgerMenuTest extends BaseTest {
 
-    @Test
+    @Test(groups = {"smoke"})
     public void testAllItemButton() {
         loginPage.openPage()
                 .loginPositive(USER, PASS)
