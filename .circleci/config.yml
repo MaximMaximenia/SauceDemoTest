@@ -33,8 +33,8 @@ jobs:
           name: Running tests
           command: mvn clean install
       - run:
-          name: Generate allure report
-          command: mvn allure:report
+          name: Generate allure serve
+          command: mvn allure:serve
           when: always
       - store_test_results:
           path: target/surefire-reports/junitreports
