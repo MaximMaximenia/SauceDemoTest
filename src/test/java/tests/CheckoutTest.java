@@ -1,8 +1,9 @@
 package tests;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-
+@Listeners(TestListener.class)
 public class CheckoutTest extends BaseTest {
     @Test
     public void cancelCheckout() {

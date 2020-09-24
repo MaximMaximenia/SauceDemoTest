@@ -2,8 +2,9 @@ package tests;
 
 import org.openqa.selenium.ElementClickInterceptedException;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
+@Listeners(TestListener.class)
 public class BurgerMenuTest extends BaseTest {
 
     @Test(groups = {"smoke"})

@@ -1,9 +1,10 @@
 package tests;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.Properties;
-
+@Listeners(TestListener.class)
 public class CartTest extends BaseTest {
     @Test
     public void testRedMarkWithAmountItemIntoCart() {
