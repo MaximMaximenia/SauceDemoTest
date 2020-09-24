@@ -7,8 +7,6 @@
             <class name="tests.BurgerMenuTest"></class>
         </classes>
     </test>
-<!--
-
     <test name="test 2">
         <classes>
             <class name="tests.CartTest"></class>
@@ -33,8 +31,5 @@
             <class name="tests.LoginTest"></class>
         </classes>
     </test>
--->
-
-
 
 </suite>
