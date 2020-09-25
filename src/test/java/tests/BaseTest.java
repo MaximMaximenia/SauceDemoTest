@@ -18,6 +18,7 @@ public class BaseTest {
     ProductListPage productPage;
     BurgerMenu burgerMenu;
     CartPage cartPage;
+    //
 
     @BeforeMethod
     public void setBrowser() {

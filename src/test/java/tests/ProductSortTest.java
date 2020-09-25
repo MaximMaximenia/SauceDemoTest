@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 @Listeners(TestListener.class)
 public class ProductSortTest extends BaseTest {
 
-    @Description("ПРОВЕРКА СОРТИРОВКИ ПО ЦЕНЕ ОТ МИНИМАЛЬНОЙ К МАКСИМАЛЬНОЙ")
+    @Description("ПРОВЕРКА СОРТИРОВКИ ПО ЦЕНЕ ОТ МИНИМАЛЬНОЙ К МАКСИМАЛЬНОЙ.")
     @Test
     public void sortByMinToHighPrice() {
         loginPage.openPage().loginPositive(USER, PASS)
@@ -15,7 +15,7 @@ public class ProductSortTest extends BaseTest {
                 checkPrice(2, "9.99");
 
     }
-    @Description("ПРОВЕРКА СОРТИРОВКИ ПО ЦЕНЕ ОТ МИНИМАЛЬНОЙ К МАКСИМАЛЬНОЙ")
+    @Description("ПРОВЕРКА СОРТИРОВКИ ПО ЦЕНЕ ОТ МИНИМАЛЬНОЙ К МАКСИМАЛЬНОЙ.")
     @Test
     public void sortByHighToMin() {
         loginPage.openPage().loginPositive(USER, PASS)

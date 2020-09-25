@@ -36,7 +36,7 @@ public class CartTest extends BaseTest {
                 addProduct("Sauce Labs Bolt T-Shirt").
                 checkCart(2);
     }
-    @Description("ПРОВЕРКА ЧТО ТОВАР УДАЛЯЕТСЯ С КОРЗИНЫ")
+    @Description("ПРОВЕРКА ЧТО ТОВАР УДАЛЯЕТСЯ С КОРЗИНЫ.")
     @Test
     public void deleteItemIntoCart() {
         loginPage.openPage().

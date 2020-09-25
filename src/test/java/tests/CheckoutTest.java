@@ -41,7 +41,7 @@ public class CheckoutTest extends BaseTest {
 
 
     }
-    @Description("ПРОВЕРКА ОШИБКИ ПРИ ПУСТОМ ПОЛЕ LASTNAME")
+    @Description("ПРОВЕРКА ОШИБКИ ПРИ ПУСТОМ ПОЛЕ LASTNAME.")
     @Test
     public void lastnameError() {
         loginPage.openPage().

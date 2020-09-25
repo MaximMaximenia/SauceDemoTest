@@ -19,7 +19,7 @@ public class BurgerMenuTest extends BaseTest {
                 expectedURL("https://www.saucedemo.com/inventory.html");
 
     }
-    @Description("ПРОВЕРКА КНОПКИ ABOUT")
+    @Description("ПРОВЕРКА КНОПКИ ABOUT.")
     @Test
     public void testAboutButton() {
         loginPage.openPage()

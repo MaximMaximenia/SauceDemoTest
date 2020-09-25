@@ -33,7 +33,7 @@ public class LoginTest extends BaseTest {
                 .isPageOpened();
     }
 
-    @Description("ПРОВЕРКА ОШИБКИ ПРИ ВВОДЕ НЕСУЩЕСТВУЮЩЕГО ПОЛЬЗОВАТЕЛЯ")
+    @Description("ПРОВЕРКА ОШИБКИ ПРИ ВВОДЕ НЕСУЩЕСТВУЮЩЕГО ПОЛЬЗОВАТЕЛЯ.")
     @Test
     public void nonexistentUser() {
         loginPage.openPage().
