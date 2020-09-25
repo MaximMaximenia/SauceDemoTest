@@ -28,7 +28,7 @@ public class BurgerMenu extends BasePage {
         driver.findElement(OPEN).click();
         return this;
     }
-@Step("НАЖАТИЕ НА КНОКУ ALLITEMS")
+@Step("НАЖАТИЕ НА КНОКУ ALLI TEMS")
     public BurgerMenu allItems() {
         driver.findElement(ALL_ITEMS).click();return this;
     }
