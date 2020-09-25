@@ -23,9 +23,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M4</version>
+                <version>3.0.0-M3</version>
                 <configuration>
                     <argLine>
+
                         -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/1.9.1/aspectjweaver-1.9.1.jar -Xmx256m
                     </argLine>
                     <argLine>-Xms512m -Xmx1024m</argLine>
