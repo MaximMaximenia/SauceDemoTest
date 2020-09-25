@@ -3,6 +3,7 @@ package tests;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pages.*;
@@ -21,7 +22,7 @@ public class BaseTest {
     //
 
     @BeforeMethod
-    public void setBrowser() {
+    public void setBrowser(ITestContext context) {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
 
         ChromeOptions options = new ChromeOptions();
@@ -33,7 +34,7 @@ public class BaseTest {
         productPage = new ProductListPage(driver);
         burgerMenu = new BurgerMenu(driver);
         cartPage = new CartPage(driver);
-
+        context.setAttribute("driver",driver);
 
     }
 
