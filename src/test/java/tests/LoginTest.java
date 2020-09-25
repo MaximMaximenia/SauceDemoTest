@@ -9,8 +9,9 @@ public class LoginTest extends BaseTest {
     @Description("ПРОВЕРКА АВТОРИЗАЦИИ")
     @Test
     public void loginTest() {
-        loginPage.openPage().
-                loginPositive("standard_user", "secret_sauce");
+        loginPage
+                .openPage()
+                .loginPositive("standard_user", "secret_sauce");
         productPage.isPageOpened();
     }
 

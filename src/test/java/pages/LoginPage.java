@@ -21,12 +21,11 @@ public class LoginPage extends BasePage {
         Assert.assertTrue(driver.findElement(LOGIN_BUTTON).isDisplayed());
         return this;
     }
-
     public LoginPage openPage() {
-        driver.get("https://www.saucedemo.com/");
-        isPageOpened();
-        return this;
-    }
+    driver.get("https://www.saucedemo.com/");
+    isPageOpened();
+    return this;
+}
 
     public ProductListPage loginPositive(String username, String password) {
         loginWithoutRedirect(username, password);

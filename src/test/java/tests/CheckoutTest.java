@@ -64,6 +64,7 @@ public class CheckoutTest extends BaseTest {
                 .checkErrorMessage("Error: Postal Code is required");
 
     }
+
     @Description("ПРОВЕРКА ЧТО СООБЩЕНИЕ ОБ ОШИБКЕ КОРРЕКТНО ЗАКРЫВАЕТСЯ")
     @Test
     public void closeErrorMessage() {
