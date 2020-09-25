@@ -51,7 +51,7 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.0.0</version>
+            <version>7.1.0</version>
             <scope>test</scope>
         </dependency>
 
@@ -95,11 +95,6 @@
             <artifactId>jaxb-api</artifactId>
             <version>2.3.0</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-            <version>1.9.1</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
