@@ -18,7 +18,7 @@ public class CartTest extends BaseTest {
                 checkCart(2).deleteItemIntoCart("Sauce Labs Bolt T-Shirt").checkRedMarkerAmount("1");
 
     }
-    @Description("ПРОВЕРКА ЧТО ТОВАР ДОБАВЛСЯЕТСЯ В КОРЗИНУ.")
+    @Description("ПРОВЕРКА ЧТО ТОВАР ДОБАВЛСЯЕТСЯ В КОРЗИНУ")
     @Test
     public void itemShouldBeAddedIntoCart() {
         loginPage.openPage().
