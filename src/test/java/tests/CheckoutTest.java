@@ -1,10 +1,10 @@
 package tests;
 
 import io.qameta.allure.Description;
-import org.testng.annotations.Listeners;
+
 import org.testng.annotations.Test;
 
-@Listeners(TestListener.class)
+
 public class CheckoutTest extends BaseTest {
     @Description("ПРОВЕРКА КНОПКИ \"CANCEL CHECKOUT\"")
     @Test

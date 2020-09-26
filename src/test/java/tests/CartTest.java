@@ -1,11 +1,9 @@
 package tests;
 
 import io.qameta.allure.Description;
-import org.testng.annotations.Listeners;
+
 import org.testng.annotations.Test;
 
-import java.util.Properties;
-@Listeners(TestListener.class)
 public class CartTest extends BaseTest {
     @Description("ПРОВЕРКА КРАСНОГО КРАСНОГО МАРКЕРА С КОЛИЧЕСТВОМ ТОВАРОВ НАД ИКОНКОЙ КОРЗИНЫ")
     @Test
