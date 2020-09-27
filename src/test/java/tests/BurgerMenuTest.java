@@ -3,11 +3,8 @@ package tests;
 import io.qameta.allure.Description;
 import org.openqa.selenium.ElementClickInterceptedException;
 
-
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners(TestListener.class)
 public class BurgerMenuTest extends BaseTest {
     @Description("ПРОВЕРКА КНОПКИ ALL ITEM")
     @Test()
