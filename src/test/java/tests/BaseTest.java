@@ -22,7 +22,7 @@ public class BaseTest {
     //
 
     @BeforeMethod
-    public void setBrowser(ITestContext context) {
+    public void setBrowser() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
 
         ChromeOptions options = new ChromeOptions();
@@ -34,7 +34,7 @@ public class BaseTest {
         productPage = new ProductListPage(driver);
         burgerMenu = new BurgerMenu(driver);
         cartPage = new CartPage(driver);
-        context.setAttribute("driver",driver);
+
 
     }
 
