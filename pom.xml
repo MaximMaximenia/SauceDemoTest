@@ -36,9 +36,9 @@
                 <artifactId>allure-maven</artifactId>
                 <version>2.10.0</version>
                 <configuration>
-                    <resultsDirectory>target/allure-results</resultsDirectory>
-                    <inputDirectories>target/allure-results</inputDirectories>
-                    <outputDirectory>target/allure-report</outputDirectory>
+                    <resultsDirectory>/allure-results</resultsDirectory>
+                    <inputDirectories>/allure-results</inputDirectories>
+                    <outputDirectory>/allure-report</outputDirectory>
                 </configuration>
             </plugin>
 
