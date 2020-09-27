@@ -28,9 +28,9 @@ public class BurgerMenu extends BasePage {
     public static final By RESET = By.cssSelector("#reset_sidebar_link");
 
     @Step("ОТКРЫТИЕ МЕНЮШКИ")
-    public BurgerMenu open() {
-
+    public BurgerMenu open() throws InterruptedException {
         driver.findElement(OPEN).click();
+        Thread.sleep(2000);
 
         return this;
     }

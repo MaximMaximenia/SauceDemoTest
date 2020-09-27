@@ -9,11 +9,13 @@ public class CartTest extends BaseTest {
     @Test
     public void testRedMarkWithAmountItemIntoCart() {
         loginPage.openPage().
-                loginPositive( System.getProperty("user"),   System.getProperty("password")).
+                loginPositive(USER,PASS).
                 addProduct("Sauce Labs Backpack").
                 addProduct("Sauce Labs Bolt T-Shirt").
                 checkRedMarkerAmount("2").
-                checkCart(2).deleteItemIntoCart("Sauce Labs Bolt T-Shirt").checkRedMarkerAmount("1");
+                checkCart(2).
+                deleteItemIntoCart("Sauce Labs Bolt T-Shirt").
+                checkRedMarkerAmount("1");
 
     }
     @Description("ПРОВЕРКА ЧТО ТОВАР ДОБАВЛСЯЕТСЯ В КОРЗИНУ")
