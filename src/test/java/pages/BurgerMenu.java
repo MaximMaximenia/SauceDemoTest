@@ -3,6 +3,9 @@ package pages;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.lang.management.OperatingSystemMXBean;
 
 
 public class BurgerMenu extends BasePage {
@@ -23,25 +26,40 @@ public class BurgerMenu extends BasePage {
     public static final By ABOUT = By.cssSelector("#about_sidebar_link");
     public static final By LOGOUT = By.cssSelector("#logout_sidebar_link");
     public static final By RESET = By.cssSelector("#reset_sidebar_link");
-@Step("ОТКРЫТИЕ МЕНЮШКИ")
+
+    @Step("ОТКРЫТИЕ МЕНЮШКИ")
     public BurgerMenu open() {
+
         driver.findElement(OPEN).click();
+
         return this;
     }
-@Step("НАЖАТИЕ НА КНОКУ ALLI TEMS")
+
+    @Step("НАЖАТИЕ НА КНОКУ ALLI TEMS")
     public BurgerMenu allItems() {
-        driver.findElement(ALL_ITEMS).click();return this;
+        wait.until(ExpectedConditions.visibilityOfElementLocated(ALL_ITEMS));
+        driver.findElement(ALL_ITEMS).click();
+        return this;
     }
+
     @Step("НАЖАТИЕ НА КНОКУ ABOUT")
     public BurgerMenu about() {
-        driver.findElement(ABOUT).click();return this;
+        wait.until(ExpectedConditions.visibilityOfElementLocated(ABOUT));
+        driver.findElement(ABOUT).click();
+        return this;
     }
+
     @Step("НАЖАТИЕ НА КНОКУ LOGUT")
     public BurgerMenu logout() {
-        driver.findElement(LOGOUT).click();return this;
+        wait.until(ExpectedConditions.visibilityOfElementLocated(LOGOUT));
+        driver.findElement(LOGOUT).click();
+        return this;
     }
+
     @Step("НАЖАТИЕ НА КНОКУ RESET...")
     public BurgerMenu reset() {
-        driver.findElement(RESET).click();return this;
+        wait.until(ExpectedConditions.visibilityOfElementLocated(RESET));
+        driver.findElement(RESET).click();
+        return this;
     }
 }
