@@ -4,7 +4,7 @@ import io.qameta.allure.Description;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners(TestListener.class)
+
 public class ProductSortTest extends BaseTest {
 
     @Description("ПРОВЕРКА СОРТИРОВКИ ПО ЦЕНЕ ОТ МИНИМАЛЬНОЙ К МАКСИМАЛЬНОЙ.")
