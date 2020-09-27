@@ -6,12 +6,13 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import pages.*;
 import utils.CapabilitiesGenerator;
 
 import java.util.concurrent.TimeUnit;
+@Listeners(TestListener.class)
 public class BaseTest {
-
     public final static String USER = "standard_user";
     public final static String PASS = "secret_sauce";
     WebDriver driver;
