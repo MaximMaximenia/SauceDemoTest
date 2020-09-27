@@ -1,15 +1,14 @@
 package tests;
 
-import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
-import net.bytebuddy.pool.TypePool;
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.NoSuchSessionException;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import java.io.ByteArrayInputStream;
 import java.util.concurrent.TimeUnit;
 
 public class TestListener implements ITestListener {
@@ -43,9 +42,7 @@ public class TestListener implements ITestListener {
 
         try {
             return ((TakesScreenshot) context.getAttribute("driver")).getScreenshotAs(OutputType.BYTES);
-        } catch (NoSuchSessionException ex) {
-            return null;
-        } catch (IllegalStateException ex) {
+        } catch (NoSuchSessionException | IllegalStateException ex) {
             return null;
         }
     }
