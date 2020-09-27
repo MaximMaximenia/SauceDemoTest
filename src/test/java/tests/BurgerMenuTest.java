@@ -12,7 +12,8 @@ public class BurgerMenuTest extends BaseTest {
         loginPage.openPage()
                 .loginPositive(USER, PASS)
                 .toCart();
-        burgerMenu.open().
+        burgerMenu
+                .open().
                 allItems().
                 expectedURL("https://www.saucedemo.com/inventory.html");
 
