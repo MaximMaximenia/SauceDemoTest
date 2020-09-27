@@ -8,6 +8,10 @@
     <artifactId>SauceDemoTest</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <aspectj.version>1.8.10</aspectj.version>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
@@ -45,11 +49,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M4</version>
-                <configuration>
-                    <suiteXmlFiles>
-                        <suiteXmlFile>${}</suiteXmlFile>
-                    </suiteXmlFiles>
-                </configuration>
             </plugin>
 
         </plugins>
@@ -78,4 +77,6 @@
         </dependency>
 
     </dependencies>
+
+
 </project>
