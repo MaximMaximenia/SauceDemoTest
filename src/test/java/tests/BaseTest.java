@@ -30,7 +30,7 @@ public class BaseTest {
         options.setHeadless(true);
         driver = new ChromeDriver(CapabilitiesGenerator.getChromeOptions());
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(35, TimeUnit.SECONDS);
         loginPage = new LoginPage(driver);
         productPage = new ProductListPage(driver);
         burgerMenu = new BurgerMenu(driver);
