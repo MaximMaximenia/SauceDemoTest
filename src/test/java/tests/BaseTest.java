@@ -11,7 +11,6 @@ import pages.*;
 import utils.CapabilitiesGenerator;
 
 import java.util.concurrent.TimeUnit;
-@Listeners(TestListener.class)
 public class BaseTest {
     public final static String USER = "standard_user";
     public final static String PASS = "secret_sauce";
