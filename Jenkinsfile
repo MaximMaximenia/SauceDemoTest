@@ -13,10 +13,10 @@ pipeline {
                 git 'https://github.com/MaximMaximenia/SauceDemoTest.git'
 
                 // Run Maven on a Unix agent.
-                //sh "mvn -Dmaven.test.failure.ignore=true clean package"
+                // sh "mvn -Dmaven.test.failure.ignore=true clean package"
 
                 // To run Maven on a Windows agent, use
-                bat "mvn clean test"
+                bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
 
             post {
@@ -27,20 +27,20 @@ pipeline {
                     archiveArtifacts 'target/*.jar'
                 }
             }
-        }
-        stage('reports') {
-            steps {
-                script {
-                    allure([
-                     includeProperties: false,
-                     jdk: '',
-                     properties: [],
-                     reportBuildPolicy: 'ALWAYS',
-                     results: [[path: 'target/allure-results']]
-             ])
-     }
- }
-}
 
+        }
+        stage('Reporting') {
+         steps {
+             script {
+                     allure([
+                             includeProperties: false,
+                             jdk: '',
+                             properties: [],
+                             reportBuildPolicy: 'ALWAYS',
+                             results: [[path: 'target/allure-results']]
+                     ])
+             }
+         }
+        }
     }
 }
