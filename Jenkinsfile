@@ -13,10 +13,10 @@ pipeline {
                 git 'https://github.com/MaximMaximenia/SauceDemoTest.git'
 
                 // Run Maven on a Unix agent.
-                //ыsh "mvn -Dmaven.test.failure.ignore=true clean package"
+                //sh "mvn -Dmaven.test.failure.ignore=true clean package"
 
                 // To run Maven on a Windows agent, use
-                bat "mvn clean install"
+                bat "-Dmaven.test.failure.ignore=true package"
             }
 
             post {
