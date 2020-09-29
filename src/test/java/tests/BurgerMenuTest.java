@@ -1,22 +1,24 @@
 package tests;
 
+import io.qameta.allure.Description;
 import org.openqa.selenium.ElementClickInterceptedException;
 
 import org.testng.annotations.Test;
 
 public class BurgerMenuTest extends BaseTest {
-
-    @Test(groups = {"smoke"})
+    @Description("ПРОВЕРКА КНОПКИ ALL ITEM")
+    @Test()
     public void testAllItemButton() {
         loginPage.openPage()
                 .loginPositive(USER, PASS)
                 .toCart();
-        burgerMenu.open().
+        burgerMenu
+                .open().
                 allItems().
                 expectedURL("https://www.saucedemo.com/inventory.html");
 
     }
-
+    @Description("ПРОВЕРКА КНОПКИ ABOUT.")
     @Test
     public void testAboutButton() {
         loginPage.openPage()
@@ -27,7 +29,7 @@ public class BurgerMenuTest extends BaseTest {
                 expectedURL("https://saucelabs.com/");
 
     }
-
+    @Description("ПРОВЕРКА КНОПКИ LOGOUT")
     @Test
     public void testLogoutButton() {
         loginPage.openPage()
@@ -36,7 +38,7 @@ public class BurgerMenuTest extends BaseTest {
                 .logout()
                 .expectedURL("https://www.saucedemo.com/index.html");
     }
-
+    @Description("ПРОВЕРКА КНОПКИ RESET...")
     @Test
     public void testResetButton() throws ElementClickInterceptedException {
         loginPage.openPage()

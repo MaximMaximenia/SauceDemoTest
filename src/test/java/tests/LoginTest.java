@@ -1,15 +1,20 @@
 package tests;
 
+import io.qameta.allure.Description;
 import org.testng.annotations.Test;
 
+
 public class LoginTest extends BaseTest {
+    @Description("ПРОВЕРКА АВТОРИЗАЦИИ")
     @Test
     public void loginTest() {
-        loginPage.openPage().
-                loginPositive("standard_user", "secret_sauce");
+        loginPage
+                .openPage()
+                .loginPositive("standard_user", "secret_sauce");
         productPage.isPageOpened();
     }
 
+    @Description("ПРОВЕРКА ОШИБКИ ПРИПУСТОМ ЛОГИНЕ")
     @Test
     public void emptyLogin() {
         loginPage.openPage().
@@ -18,6 +23,7 @@ public class LoginTest extends BaseTest {
                 .isPageOpened();
     }
 
+    @Description("ПРОВЕРКА ОШИБКИ ПРИ ПУСТОМ ПАРОЛЕ")
     @Test
     public void emptyPassword() {
         loginPage.openPage().
@@ -26,6 +32,7 @@ public class LoginTest extends BaseTest {
                 .isPageOpened();
     }
 
+    @Description("ПРОВЕРКА ОШИБКИ ПРИ ВВОДЕ НЕСУЩЕСТВУЮЩЕГО ПОЛЬЗОВАТЕЛЯ.")
     @Test
     public void nonexistentUser() {
         loginPage.openPage().
@@ -34,6 +41,7 @@ public class LoginTest extends BaseTest {
                 .isPageOpened();
     }
 
+    @Description("ПРОВЕРКА ОШИБКИ ПРИ ВВОДЕ ЗАБЛОКИРОВАНОГО ПОЛЬЗОВАТЕЛЯ")
     @Test
     public void lockedUserTest() {
         loginPage.openPage().
@@ -42,6 +50,7 @@ public class LoginTest extends BaseTest {
                 .isPageOpened();
     }
 
+    @Description("ПРОВЕРКА ЧТО СООБЩЕНИЕ ОБ ОШИБКЕ КОРРЕКТНО ЗАКРЫВАЕТСЯ ")
     @Test
     public void closeErrorMessage() {
         loginPage.openPage().
