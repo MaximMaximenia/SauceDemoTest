@@ -8,10 +8,6 @@
     <artifactId>SauceDemoTest</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <properties>
-        <aspectj.version>1.8.10</aspectj.version>
-    </properties>
-
     <build>
         <plugins>
             <plugin>
@@ -27,7 +23,7 @@
                     <dependency>
                         <groupId>org.aspectj</groupId>
                         <artifactId>aspectjweaver</artifactId>
-                        <version>${aspectj.version}</version>
+                        <version>1.8.10</version>
                     </dependency>
                 </dependencies>
             </plugin>
