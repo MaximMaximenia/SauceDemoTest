@@ -23,6 +23,8 @@
                         -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/1.9.1/aspectjweaver-1.9.1.jar
                         -Xmx256m
                     </argLine>
+                    <forkCount>3</forkCount>
+                    <reuseForks>true</reuseForks>
                 </configuration>
 
                 <dependencies>
