@@ -10,7 +10,6 @@ import pages.*;
 import utils.CapabilitiesGenerator;
 
 import java.util.concurrent.TimeUnit;
-
 public class BaseTest {
     public final static String USER = "standard_user";
     public final static String PASS = "secret_sauce";
@@ -19,7 +18,6 @@ public class BaseTest {
     ProductListPage productPage;
     BurgerMenu burgerMenu;
     CartPage cartPage;
-    //
 
     @BeforeMethod
     public void setBrowser(ITestContext context) {
