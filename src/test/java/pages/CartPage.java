@@ -1,6 +1,7 @@
 package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import java.util.List;
 
@@ -23,7 +24,6 @@ public class CartPage extends BasePage {
         Assert.assertTrue(driver.findElement(By.cssSelector(".btn_action.checkout_button")).isDisplayed());
         return this;
     }
-
     public CartPage openPage() {
         driver.get("https://www.saucedemo.com/cart.html");
         isPageOpened();
@@ -70,7 +70,7 @@ public class CartPage extends BasePage {
     }
     public void closeErrorMessage() {
         driver.findElement(By.cssSelector(".error-button")).click();
-        List errors = driver.findElements(By.cssSelector("[data-test=\"error\"]"));
+        List<WebElement> errors = driver.findElements(By.cssSelector("[data-test=\"error\"]"));
         Assert.assertEquals(errors.size(), 0);
     }
 }
