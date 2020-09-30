@@ -17,35 +17,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.0</version>
-                <configuration>
-                    <testFailureIgnore>true</testFailureIgnore>
-                    <skip>false</skip>
-                    <reuseForks>false</reuseForks>
-                    <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
-                    <argLine>-Dfile.encoding=UTF-8</argLine>
-                    <useSystemClassLoader>false</useSystemClassLoader>
-                    <threadCount>1</threadCount>
-                    <includes>
-                        <!--Test* classes for the app testing -->
-                        <include>**/directory/Test*.java</include>
-                    </includes>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.aspectj</groupId>
-                        <artifactId>aspectjweaver</artifactId>
-                        <version>${aspectj.version}</version>
-                    </dependency>
-                </dependencies>
+                <version>3.0.0-M3</version>
             </plugin>
             <plugin>
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
                 <version>2.10.0</version>
-
             </plugin>
-
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
@@ -57,24 +35,18 @@
 
         </plugins>
     </build>
-
     <dependencies>
-
-        <!-- https://mvnrepository.com/artifact/org.apache.maven.surefire/surefire-testng -->
-        <dependency>
-            <groupId>org.apache.maven.surefire</groupId>
-            <artifactId>surefire-testng</artifactId>
-            <version>2.22.0</version>
-        </dependency>
-
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
             <version>2.7.0</version>
             <scope>test</scope>
         </dependency>
-
-
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
@@ -82,8 +54,6 @@
             <version>7.1.0</version>
             <scope>test</scope>
         </dependency>
-
-
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -91,7 +61,6 @@
             <version>3.141.59</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 
 
