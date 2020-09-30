@@ -16,7 +16,7 @@ pipeline {
                 // sh "mvn -Dmaven.test.failure.ignore=true clean package"
 
                 // To run Maven on a Windows agent, use
-                bat "mvn clean install"
+                bat "mvn test -DargLine="-Djdk.net.URLClassPath.disableClassPathURLCheck=true""
             }
 
             post {
