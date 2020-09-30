@@ -20,19 +20,19 @@ public class TestListener implements ITestListener {
     }
 
     public void onTestSuccess(ITestResult iTestResult) {
-        System.out.println(String.format("=======================================FINISHED TEST %s Duration: %ss ========================================", iTestResult.getName(),
-                getExecutionTime(iTestResult)));
+        System.out.printf("=======================================FINISHED TEST %s Duration: %ss ========================================%n", iTestResult.getName(),
+                getExecutionTime(iTestResult));
 
     }
 
     public void onTestFailure(ITestResult iTestResult) {
-        System.out.println(String.format("======================================== FAILED TEST %s Duration: %ss ========================================", iTestResult.getName(),
-                getExecutionTime(iTestResult)));
+        System.out.printf("======================================== FAILED TEST %s Duration: %ss ========================================%n", iTestResult.getName(),
+                getExecutionTime(iTestResult));
         takeScreenshot(iTestResult);
     }
 
     public void onTestSkipped(ITestResult iTestResult) {
-        System.out.println(String.format("======================================== SKIPPING TEST %s ========================================", iTestResult.getName()));
+        System.out.printf("======================================== SKIPPING TEST %s ========================================%n", iTestResult.getName());
         takeScreenshot(iTestResult);
     }
 
