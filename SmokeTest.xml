@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+<suite name="My test suite" parallel="tests">
+    <test name="testing login">
+        <classes>
+            <class name="tests.LoginTest" />
+        </classes>
+    </test>
+    <test name="testing cart">
+        <classes>
+            <class name="tests.CartTest" />
+        </classes>
+    </test>
+    <test name="testing sort">
+        <classes>
+            <class name="tests.ProductSortTest" />
+        </classes>
+    </test>
+    <test name="testing modal menu">
+        <classes>
+            <class name="tests.BurgerMenuTest" />
+        </classes>
+    </test>
+    <test name="testing checkout">
+        <classes>
+            <class name="tests.CheckoutTest" />
+        </classes>
+    </test>
+</suite>
