@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
-<suite name="My test suite" parallel="tests">
+<suite name="My test suite" parallel="tests" thread-count="2">
     <test name="testing login">
         <classes>
             <class name="tests.LoginTest" />
