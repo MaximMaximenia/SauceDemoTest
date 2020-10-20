@@ -2,7 +2,6 @@ package tests;
 
 import io.qameta.allure.Description;
 import org.openqa.selenium.ElementClickInterceptedException;
-
 import org.testng.annotations.Test;
 
 public class BurgerMenuTest extends BaseTest {
