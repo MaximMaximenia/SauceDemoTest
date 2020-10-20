@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import pages.BurgerMenu;
 import pages.CartPage;
 import pages.LoginPage;
@@ -13,6 +14,7 @@ import pages.ProductListPage;
 import utils.CapabilitiesGenerator;
 
 import java.util.concurrent.TimeUnit;
+
 public class BaseTest {
     public final static String USER = "standard_user";
     public final static String PASS = "secret_sauce";
@@ -38,7 +40,7 @@ public class BaseTest {
 
     }
 
-    @AfterMethod(alwaysRun = true)
+    @AfterMethod()
     public void closeDriver() { driver.quit(); }
 }
 
