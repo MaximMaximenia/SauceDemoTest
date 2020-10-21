@@ -32,7 +32,7 @@ public class TestListener implements ITestListener {
     }
 
     public void onTestSkipped(ITestResult iTestResult) {
-        System.out.println(String.format("======================================== SKIPPING TEST %s ========================================", iTestResult.getName()));
+        System.out.println(String.format("======================================= SKIPPING TEST %s ========================================", iTestResult.getName()));
         takeScreenshot(iTestResult);
     }
 
